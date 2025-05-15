@@ -154,6 +154,7 @@ public class main {
 		
 			case "Logout":
 			break;
+			// TODO: Aggiungere altre features
 		}
 	}
 	
