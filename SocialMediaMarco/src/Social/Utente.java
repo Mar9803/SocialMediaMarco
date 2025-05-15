@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class Utente implements RelazioniUtenti{
 	protected ArrayList<Utente> ListaFollower;
 	protected ArrayList<Utente> ListaSeguiti;
+	protected ArrayList<Post> ListaPost;
+	protected Post unPost;
 	protected String Username;
 	protected String Password;
 	protected int Nfollower;
@@ -13,9 +15,7 @@ public class Utente implements RelazioniUtenti{
 	
 	protected ArrayList<String> Notifiche;
 	
-	
-		
-	
+
 	public Utente(String Username, String Password) {
 		this.Username = Username;
 		this.Password = Password;
@@ -30,7 +30,7 @@ public class Utente implements RelazioniUtenti{
 		nuovoSeguito.ListaFollower.add(this);
 		this.Nseguiti += 1;
 		nuovoSeguito.Nfollower += 1;
-		System.out.println(this.Username + " ha iniziato a seguire " + nuovoSeguito.getUsername());
+		//System.out.println(this.Username + " ha iniziato a seguire " + nuovoSeguito.getUsername());
 	}
  
 	public void SmettiSeguire(Utente userTogliere) {
@@ -38,7 +38,7 @@ public class Utente implements RelazioniUtenti{
 		this.Nseguiti -= 1;
 		userTogliere.ListaFollower.remove(this);
 		userTogliere.Nfollower -= 1;
-		System.out.println("hai smesso di seguire" + userTogliere.getUsername());
+		//System.out.println("hai smesso di seguire" + userTogliere.getUsername());
 	}
 
 	
@@ -95,6 +95,16 @@ public class Utente implements RelazioniUtenti{
 
 	public void setNseguiti(int nseguiti) {
 		Nseguiti = nseguiti;
+	}
+
+
+	public Post getUnPost() {
+		return unPost;
+	}
+
+
+	public void setUnPost(Post unPost) {
+		this.unPost = unPost;
 	}
 
 

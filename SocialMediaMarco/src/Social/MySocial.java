@@ -3,9 +3,9 @@ package Social;
 import java.util.ArrayList;
 
 public class MySocial {
-	public static ArrayList<Utente> Iscritti;
-	public static ArrayList<Utente> Loggati;
-	public static ArrayList<Utente> BannatiDalSocial;
+	public  ArrayList<Utente> Iscritti;
+	public  ArrayList<Utente> Loggati;
+	public  ArrayList<Utente> BannatiDalSocial;
 	
 	
 	
@@ -16,16 +16,16 @@ public class MySocial {
 		this.Loggati = new ArrayList<>(); 
 		
 	}
-	public static void IscrizioneSocial(Utente u) {
+	public void IscrizioneSocial(Utente u) {
 		Iscritti.add(u);
 		
 	} 
 	
-	public static boolean IsIscritto(Utente u) {
+	public boolean IsIscritto(Utente u) {
 		return Iscritti.contains(u);
 	}
 	
-	public static void LogIn(Utente u) {
+	public void LogIn(Utente u) {
 		Loggati.add(u);
 		
 	}
